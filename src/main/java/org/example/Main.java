@@ -4,16 +4,22 @@ package org.example;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int[] countEvens1 = {2, 1, 2, 3, 4};
+        int[] countEvens2 = {2, 2, 0};
+        int[] countEvens3 = {1, 3, 5};
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        System.out.println(ArrayUtils.countEvens(countEvens1));  // 3
+        System.out.println(ArrayUtils.countEvens(countEvens2));  // 3
+        System.out.println(ArrayUtils.countEvens(countEvens3));  // 0
+
+        int[] findDifference1 = {3, 7, 2, 9, 1};
+        System.out.println(ArrayUtils.findDifference(findDifference1));  // 8
+
+        int[] hasAdjacentZeros1 = {1, 0, 0, 2, 3};
+        int[] hasAdjacentZeros2 = {1, 2, 0, 3, 0};
+
+        System.out.println(ArrayUtils.hasAdjacentZeros(hasAdjacentZeros1));  // true
+        System.out.println(ArrayUtils.hasAdjacentZeros(hasAdjacentZeros2));  // false
     }
 }
